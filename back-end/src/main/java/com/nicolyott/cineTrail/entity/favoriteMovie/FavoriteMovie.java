@@ -28,6 +28,7 @@ public class FavoriteMovie {
     private LocalDateTime favoriteDate;
     private String poster;
     private Double voteAverage;
+    private boolean isFavorite;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -44,6 +45,7 @@ public class FavoriteMovie {
         this.favoriteDate = LocalDateTime.now();
         this.poster = movieDTO.poster();
         this.voteAverage = movieDTO.voteAverage();
+        this.isFavorite = true;
         this.favoriteMovieCategory = favoriteMovieCategory;
         this.user = user;
     }
